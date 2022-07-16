@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badminton</title>
+    <style>
+        .badminton {
+            border: 2px solid;
+            position: relative;
+            margin: 10rem 0;
+            height: 500px;
+        }
+
+        .badminton-left {
+            transition: transform .2s ease-in;
+
+        }
+
+        .badminton:hover .badminton-left {
+            /* transform: rotate(50deg); */
+            animation: identifier 4s ease-in-out .2s infinite;
+
+        }
+
+        .cock {
+            position: relative;
+            top: -260px;
+            left: -200px;
+            transition: transform 2s ease-in-out .2s;
+
+        }
+
+
+        .badminton:hover .cock {
+            /* transform: translate(900px, -90px); */
+            animation: cocks 2s ease-in-out 4s infinite alternate;
+        }
+
+        .badminton-right {
+            position: absolute;
+            right: 130px;
+            height: 400px;
+            top: -40px
+        }
+
+        .badminton-right {
+            transform: rotate(70deg);
+            transition: transform .3s ease-in 1.8s;
+        }
+
+        .badminton:hover .badminton-right {
+            /* transform: rotate(50deg); */
+            animation: identifier 4s ease-in-out 1.8s infinite;
+
+        }
+
+        @keyframes cocks {
+            0% {
+                transform: translate(0px);
+            }
+
+            50% {
+                transform: translate(500px, -200px);
+            }
+
+            100% {
+                transform: translate(840px);
+            }
+        }
+
+        @keyframes identifier {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(50deg);
+            }
+        }
+
+        @keyframes identifier1 {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(-50deg);
+            }
+        }
+
+        .hr {
+            position: absolute;
+            width: 300px;
+            left: 600px;
+            bottom: 135px;
+            height: 10px;
+            background-color: #333;
+            transform: rotate(90deg);
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Badminton</h1>
+
+    <div class="badminton">
+        <img class="badminton-left" src="images/badminton-removebg-preview.png" alt="">
+        <img class="cock" src="images/cock-removebg-preview.png" alt="">
+        <hr class="hr">
+        <img class="badminton-right" src="images/badminton-removebg-preview.png" alt="">
+
+    </div>
+
+</body>
+
+</html>
